@@ -62,10 +62,15 @@
           </div>
 
           <div class="links">
-              <a href="/admin">@lang('messages.administration')</a>
-              <a href="#">@lang('messages.flight_plane')</a>
+            @if(Auth::check())
+            @if(Auth::user()->role == 2)
+            <a href="/admin">@lang('messages.administration')</a>
+            @else
+            @endif
+              @endif
+              <a href="/pasajerosLista">@lang('messages.flight_plane')</a>
               <a href="/listaVuelos/mostrar">@lang('messages.future_flights')</a>
-              <a href="/">@lang('messages.middleware')</a>
+              <a href="">@lang('messages.middleware')</a>
           </div>
           <hr><br><br>
 					<div class="op">
