@@ -31,11 +31,6 @@ class HomeController extends Controller
     {
 
        
-        $validated = $request->validate([
-
-            'phone' => 'required|numeric|digits_between:9,15',
-            'date_of_birth' => 'required|date|date_format:Y-m-d|before:"2002-01-01"',
-            
-        ]);
+       
     }
 }

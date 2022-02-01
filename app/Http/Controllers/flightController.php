@@ -25,10 +25,10 @@ class flightController extends Controller
         $asientos_libres = $reservaVuelo->available_seats;
         $reservados = $request->asientos;
         $resultado = $asientos_libres - $reservados;
-        $reservados->available_seats = $resultado;
-        $reservados->save();
+        $reservaVuelo->available_seats = $resultado;
+        $reservaVuelo->save();
 
-        $reservados->user()->attach($idUser);
+        $reservaVuelo->user()->attach($idUser);
 
         return redirect()->route('ListaVuelos');
 

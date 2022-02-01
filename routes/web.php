@@ -28,4 +28,4 @@ Route::get('/listaVuelos/mostrar', [App\Http\Controllers\flightController::class
 
 //actualizar asientos libres y meter datos en la tabla pivot
 
-Route::post('/listaVuelos/editar/{id}', [App\Http\Controllers\flightController::class, 'GuardarVuelos']);
+Route::post('/listaVuelos/editar/{id}', [App\Http\Controllers\flightController::class, 'GuardarVuelo']);

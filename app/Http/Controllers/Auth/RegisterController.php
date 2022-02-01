@@ -56,8 +56,8 @@ class RegisterController extends Controller
             'gender' => ['required'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:12', 'confirmed'],
-            'password_confirmation' => ['required', 'string', 'min:12', 'confirmed'],
-           
+            'phone' => 'required|numeric|digits_between:9,15',
+            'date_of_birth' => 'required|date|date_format:Y-m-d|before:"2000-01-01"',
         ]);
     }
 

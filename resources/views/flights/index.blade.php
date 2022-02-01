@@ -17,7 +17,7 @@
 
     @foreach($vuelos as $vuelo)
 
-    <form action="/ListaVuelos/editar/{{$vuelo->id}}" method="post">
+    <form action="/listaVuelos/editar/{{$vuelo->id}}" method="post">
       @csrf
 
     @if($fechaAsc < $vuelo->date)

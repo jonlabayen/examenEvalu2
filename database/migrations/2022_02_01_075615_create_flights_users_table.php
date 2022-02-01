@@ -13,7 +13,7 @@ class CreateFlightsUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('flights_users', function (Blueprint $table) {
+        Schema::create('flight_user', function (Blueprint $table) {
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('flight_id')->unsigned();
@@ -29,6 +29,6 @@ class CreateFlightsUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('flights_users');
+        Schema::dropIfExists('flight_user');
     }
 }

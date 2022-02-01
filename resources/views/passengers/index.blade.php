@@ -17,6 +17,8 @@
       <th>Ticket acquisition date</th>
     </tr>
 
+    
+
 
   </table>
 
