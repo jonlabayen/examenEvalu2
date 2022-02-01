@@ -18,6 +18,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => "admin",
             'email' => "admin@zubirimanteo.com",
+            'role'=> "2",
             'password' => bcrypt("password"),
         ]);
 
@@ -43,6 +44,7 @@ class UserSeeder extends Seeder
                 'date_of_birth' => Carbon::today()->subDays(rand(-200, 365)),
                 'gender' => $gender,
                 'email' => $firstNames[$randomName] . $lastnames[$randomLastName] . $i . "@zubirimanteo.com",
+                'role'=> random_int(1,2),
                 'password' => bcrypt("password"),
             ]);
         }
